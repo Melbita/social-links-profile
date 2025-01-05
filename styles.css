@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+
+  /* Font */
+  font-family: "Inter";
+  font-size: 16px;
+
+  /* Color */
+  --color-green: hsl(75, 94%, 57%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey-700: hsl(0, 0%, 20%);
+  --color-grey-800: hsl(0, 0%, 12%);
+  --color-grey-900: hsl(0, 0%, 8%);
+
+
+  /* Spacing */
+  --spacing-mini:  0.5rem;
+  --spacing-medium: 1rem; 
+  --spacing-big:  1.5rem;
+
+}
+
+html,body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--color-grey-900);
+  color: var(--color-white);
+}
+
+section{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-widget{
+  display: grid;
+  background-color: var(--color-grey-800);
+  border-radius: 20px;
+  min-height: 460px;
+  gap: var(--spacing-medium);
+  padding: var(--spacing-medium);
+  margin: var(--spacing-big);
+  width: 100%;
+
+
+  .social-widget__profile{
+    display: grid;
+    justify-items: center;
+    
+    .social-widget__image{
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+    }
+
+    .social-widget__personal{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .social-widget__name{
+      font-weight: 700;
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .social-widget__location{
+      font-weight: 700;
+      font-size: 0.75rem;
+      color: var(--color-green);
+    } 
+    
+    .social-widget__phrase{
+      font-weight: 400;
+      font-size: 0.875rem;
+    }
+  }
+
+  .social-widget__links{
+    display: grid;
+    gap: var(--spacing-medium);
+
+    .social-widget__button{
+      background-color: var(--color-grey-700);
+      text-decoration: none;
+      color: var(--color-white);
+      font-weight: 700;
+      font-size: 0.875rem;
+      border-radius: 5px;
+      text-align: center;
+      padding: 0.8rem;
+      cursor: pointer;
+
+      &:hover{
+        background-color: var(--color-green);
+      }
+    }
+  }
+}
+
+@media (min-width: 375px){
+  .social-widget{
+    padding: var(--spacing-big);
+    width: 375px;
+    margin: 0;
+  }
+}
